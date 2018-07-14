@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="listCell" rowHeight="82" id="cTz-nu-6jk" customClass="ListCell" customModule="Jane" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cTz-nu-6jk" id="eS3-8v-Wka">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yu-mO-DtK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User_Gray" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-Ok-Eqt">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L2r-Jy-MD1"/>
+                                    <constraint firstAttribute="width" constant="50" id="duP-Jf-uGY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsq-nf-ru9">
+                                <rect key="frame" x="70" y="23.5" width="81" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-GI-TWv">
+                                <rect key="frame" x="70" y="73" width="305" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="qMg-sC-qNc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue Back" translatesAutoresizingMaskIntoConstraints="NO" id="jqk-7F-bqo">
+                                <rect key="frame" x="335" y="22.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="JGY-0e-FkV"/>
+                                    <constraint firstAttribute="width" constant="25" id="oIE-Sz-G4Q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vsq-nf-ru9" firstAttribute="centerY" secondItem="GjL-Ok-Eqt" secondAttribute="centerY" id="0lE-FY-sKm"/>
+                            <constraint firstItem="GjL-Ok-Eqt" firstAttribute="top" secondItem="7Yu-mO-DtK" secondAttribute="top" constant="10" id="4xF-Mn-Au8"/>
+                            <constraint firstAttribute="trailing" secondItem="Idi-GI-TWv" secondAttribute="trailing" id="9oT-JG-VGN"/>
+                            <constraint firstItem="Idi-GI-TWv" firstAttribute="leading" secondItem="vsq-nf-ru9" secondAttribute="leading" id="TXd-40-xct"/>
+                            <constraint firstItem="vsq-nf-ru9" firstAttribute="leading" secondItem="GjL-Ok-Eqt" secondAttribute="trailing" constant="10" id="WRE-qp-Vu5"/>
+                            <constraint firstItem="GjL-Ok-Eqt" firstAttribute="leading" secondItem="7Yu-mO-DtK" secondAttribute="leading" constant="10" id="bss-Z0-94b"/>
+                            <constraint firstAttribute="bottom" secondItem="Idi-GI-TWv" secondAttribute="bottom" id="eK7-xv-PaZ"/>
+                            <constraint firstAttribute="trailing" secondItem="jqk-7F-bqo" secondAttribute="trailing" constant="15" id="ff4-Vf-135"/>
+                            <constraint firstItem="Idi-GI-TWv" firstAttribute="top" secondItem="GjL-Ok-Eqt" secondAttribute="bottom" constant="13" id="iYE-S9-icj"/>
+                            <constraint firstItem="jqk-7F-bqo" firstAttribute="centerY" secondItem="GjL-Ok-Eqt" secondAttribute="centerY" id="x8l-jg-5Mn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Yu-mO-DtK" firstAttribute="top" secondItem="eS3-8v-Wka" secondAttribute="top" id="PhL-Zg-HN6"/>
+                    <constraint firstAttribute="bottom" secondItem="7Yu-mO-DtK" secondAttribute="bottom" priority="250" id="dtq-pX-U88"/>
+                    <constraint firstAttribute="trailing" secondItem="7Yu-mO-DtK" secondAttribute="trailing" id="oFb-01-Lfr"/>
+                    <constraint firstItem="7Yu-mO-DtK" firstAttribute="leading" secondItem="eS3-8v-Wka" secondAttribute="leading" id="rdt-cQ-6A8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgCheck" destination="jqk-7F-bqo" id="gVb-KM-Wwu"/>
+                <outlet property="imgStudentImage" destination="GjL-Ok-Eqt" id="cgP-rI-9YU"/>
+                <outlet property="lblStudentName" destination="vsq-nf-ru9" id="jiF-ZF-629"/>
+            </connections>
+            <point key="canvasLocation" x="22.5" y="39"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Blue Back" width="25" height="25"/>
+        <image name="User_Gray" width="30" height="30"/>
+    </resources>
+</document>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="newCell" rowHeight="108" id="gjw-Wu-3In" customClass="NotificationCell" customModule="Jane" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gjw-Wu-3In" id="bS3-YB-5f0">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsa-4n-txk" customClass="CardView" customModule="Jane" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="365" height="97.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ACu-ES-w0F">
+                                <rect key="frame" x="10" y="10" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Qyl-L1-uXA"/>
+                                    <constraint firstAttribute="width" constant="45" id="V2Q-Si-gfF"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttx-Ff-r1c">
+                                <rect key="frame" x="65" y="12.5" width="290" height="40.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nikunj" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exV-CM-ull">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 th may 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-q8-x8C">
+                                        <rect key="frame" x="0.0" y="23.5" width="285" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qDo-q8-x8C" firstAttribute="top" secondItem="exV-CM-ull" secondAttribute="bottom" constant="3" id="7DU-Rc-Sb8"/>
+                                    <constraint firstAttribute="trailing" secondItem="exV-CM-ull" secondAttribute="trailing" constant="5" id="7aa-SW-hB1"/>
+                                    <constraint firstAttribute="bottom" secondItem="qDo-q8-x8C" secondAttribute="bottom" id="LJd-IV-qX5"/>
+                                    <constraint firstItem="qDo-q8-x8C" firstAttribute="trailing" secondItem="exV-CM-ull" secondAttribute="trailing" id="aQj-ql-Xu0"/>
+                                    <constraint firstItem="exV-CM-ull" firstAttribute="leading" secondItem="Ttx-Ff-r1c" secondAttribute="leading" id="lPt-rT-b4h"/>
+                                    <constraint firstItem="qDo-q8-x8C" firstAttribute="leading" secondItem="exV-CM-ull" secondAttribute="leading" id="nwd-6w-0Qk"/>
+                                    <constraint firstItem="exV-CM-ull" firstAttribute="top" secondItem="Ttx-Ff-r1c" secondAttribute="top" id="snn-MB-gaq"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95S-cE-unc">
+                                <rect key="frame" x="10" y="75" width="345" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="95S-cE-unc" firstAttribute="leading" secondItem="ACu-ES-w0F" secondAttribute="leading" id="29h-rE-J5i"/>
+                            <constraint firstItem="ACu-ES-w0F" firstAttribute="top" secondItem="fsa-4n-txk" secondAttribute="top" constant="10" id="HLS-YP-HPZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ttx-Ff-r1c" secondAttribute="trailing" constant="10" id="HaT-Uj-dlO"/>
+                            <constraint firstAttribute="bottom" secondItem="95S-cE-unc" secondAttribute="bottom" priority="250" constant="15" id="LUE-GB-btA"/>
+                            <constraint firstItem="Ttx-Ff-r1c" firstAttribute="centerY" secondItem="ACu-ES-w0F" secondAttribute="centerY" id="Mf4-Ut-00m"/>
+                            <constraint firstItem="Ttx-Ff-r1c" firstAttribute="leading" secondItem="ACu-ES-w0F" secondAttribute="trailing" constant="10" id="nhn-bI-wdY"/>
+                            <constraint firstItem="95S-cE-unc" firstAttribute="top" secondItem="ACu-ES-w0F" secondAttribute="bottom" constant="20" id="rb4-Er-27H"/>
+                            <constraint firstItem="95S-cE-unc" firstAttribute="trailing" secondItem="Ttx-Ff-r1c" secondAttribute="trailing" id="zRZ-Lt-0hv"/>
+                            <constraint firstItem="ACu-ES-w0F" firstAttribute="leading" secondItem="fsa-4n-txk" secondAttribute="leading" constant="10" id="zzN-0N-kCM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                <color key="value" red="0.66666666666666663" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="fsa-4n-txk" firstAttribute="leading" secondItem="bS3-YB-5f0" secondAttribute="leading" constant="5" id="Ori-Lc-KUW"/>
+                    <constraint firstItem="fsa-4n-txk" firstAttribute="top" secondItem="bS3-YB-5f0" secondAttribute="top" constant="5" id="ZSf-tE-s4P"/>
+                    <constraint firstAttribute="bottom" secondItem="fsa-4n-txk" secondAttribute="bottom" constant="5" id="dEP-JA-par"/>
+                    <constraint firstAttribute="trailing" secondItem="fsa-4n-txk" secondAttribute="trailing" constant="5" id="gsd-42-UcO"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                        <real key="value" value="1"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                        <integer key="value" value="1"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                        <integer key="value" value="1"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="imgNotification" destination="ACu-ES-w0F" id="hdu-a5-t6k"/>
+                <outlet property="lblDate" destination="qDo-q8-x8C" id="jbN-OP-hYn"/>
+                <outlet property="lblDesc" destination="95S-cE-unc" id="b7W-Vg-zwg"/>
+                <outlet property="lblName" destination="exV-CM-ull" id="57g-q1-pSf"/>
+            </connections>
+            <point key="canvasLocation" x="51.5" y="98"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="App Logo" width="500" height="447"/>
+    </resources>
+</document>

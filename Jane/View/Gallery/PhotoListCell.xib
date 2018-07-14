@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newCell" id="EIh-eS-dYF" customClass="PhotoListCell" customModule="Jane" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJd-i3-6d6">
+                        <rect key="frame" x="2" y="2" width="46" height="46"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="yJd-i3-6d6" firstAttribute="leading" secondItem="EIh-eS-dYF" secondAttribute="leading" constant="2" id="0Pi-h5-F3h"/>
+                <constraint firstItem="yJd-i3-6d6" firstAttribute="top" secondItem="EIh-eS-dYF" secondAttribute="top" constant="2" id="iJf-x3-FPl"/>
+                <constraint firstAttribute="trailing" secondItem="yJd-i3-6d6" secondAttribute="trailing" constant="2" id="p44-6r-l7b"/>
+                <constraint firstAttribute="bottom" secondItem="yJd-i3-6d6" secondAttribute="bottom" constant="2" id="w7e-1Z-fKc"/>
+            </constraints>
+            <connections>
+                <outlet property="imgPhoto" destination="yJd-i3-6d6" id="4lu-iS-VkU"/>
+            </connections>
+            <point key="canvasLocation" x="8" y="90"/>
+        </collectionViewCell>
+    </objects>
+</document>
