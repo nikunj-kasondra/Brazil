@@ -51,24 +51,16 @@ class ChatVC: UIViewController {
     @IBAction func btnMenuClicked(_ sender: Any) {
         if (AgendaVC.loginDict.value(forKey: "profile") as! NSDictionary).value(forKey: "userType") as! String != "RESPONSIBLE" {
             if !SideMenuView.isOpen {
-                
                 SideMenuView1.open(toView: self.view)
-                
             } else {
-                
                 SideMenuView1.close(toView: self.view)
-                
             }
         }
         else {
             if !SideMenuView.isOpen {
-                
                 SideMenuView.open(toView: self.view)
-                
             } else {
-                
                 SideMenuView.close(toView: self.view)
-                
             }
         }
     }
@@ -180,10 +172,12 @@ extension ChatVC: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if ChatVC.tab == 0 {
+            ChatListVC.headerName = (departmentArr.value(forKey: "departmentName") as! NSArray).object(at: indexPath.row) as! String
             ChatVC.hashVal = (self.departmentArr.value(forKey: "departmentHash") as! NSArray).object(at: indexPath.row) as! String
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "ChatListVC")
             self.navigationController?.pushViewController(VC!, animated: true)
         } else {
+            ChatListVC.headerName = (educatorArr.value(forKey: "educatorName") as! NSArray).object(at: indexPath.row) as! String
             ChatVC.hashVal = (self.educatorArr.value(forKey: "educatorHash") as! NSArray).object(at: indexPath.row) as! String
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "ChatListVC")
             self.navigationController?.pushViewController(VC!, animated: true)

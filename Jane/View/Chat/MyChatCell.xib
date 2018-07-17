@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reK-Vx-0N2">
-                        <rect key="frame" x="10" y="0.0" width="55.5" height="43.5"/>
+                        <rect key="frame" x="10" y="0.0" width="16" height="51.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ci7-An-Mmh">
-                                <rect key="frame" x="8" y="0.0" width="39.5" height="43.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ci7-An-Mmh">
+                                <rect key="frame" x="8" y="4" width="0.0" height="43.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43.5" id="E3d-yT-irx"/>
                                 </constraints>
@@ -31,22 +31,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.01176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.30196078430000001" green="0.55294117649999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ci7-An-Mmh" secondAttribute="bottom" id="OGX-xt-NIv"/>
-                            <constraint firstItem="ci7-An-Mmh" firstAttribute="top" secondItem="reK-Vx-0N2" secondAttribute="top" id="am7-qI-rUl"/>
+                            <constraint firstAttribute="bottom" secondItem="ci7-An-Mmh" secondAttribute="bottom" constant="4" id="OGX-xt-NIv"/>
+                            <constraint firstItem="ci7-An-Mmh" firstAttribute="top" secondItem="reK-Vx-0N2" secondAttribute="top" constant="4" id="am7-qI-rUl"/>
                             <constraint firstAttribute="trailing" secondItem="ci7-An-Mmh" secondAttribute="trailing" constant="8" id="fbi-fo-Sdz"/>
                             <constraint firstItem="ci7-An-Mmh" firstAttribute="leading" secondItem="reK-Vx-0N2" secondAttribute="leading" constant="8" id="wdx-zg-Kyc"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="reK-Vx-0N2" secondAttribute="bottom" id="YMc-YP-3VI"/>
+                    <constraint firstAttribute="bottom" secondItem="reK-Vx-0N2" secondAttribute="bottom" priority="250" constant="10" id="YMc-YP-3VI"/>
                     <constraint firstItem="reK-Vx-0N2" firstAttribute="leading" secondItem="dBo-n6-qRC" secondAttribute="leading" constant="10" id="bfZ-uO-DcF"/>
                     <constraint firstItem="reK-Vx-0N2" firstAttribute="top" secondItem="dBo-n6-qRC" secondAttribute="top" id="ero-fw-rrr"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="reK-Vx-0N2" secondAttribute="trailing" constant="90" id="gi2-Bw-Jhs"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="lblChat" destination="ci7-An-Mmh" id="jhQ-Sm-NTC"/>
+            </connections>
             <point key="canvasLocation" x="41" y="100"/>
         </tableViewCell>
     </objects>

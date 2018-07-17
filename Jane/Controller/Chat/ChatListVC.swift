@@ -13,9 +13,11 @@ class ChatListVC: UIViewController {
     @IBOutlet weak var tblChat: UITableView!
     @IBOutlet weak var lblHeader: UILabel!
     var chatListArr = NSArray()
+    static var headerName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblHeader.text = ChatListVC.headerName
         tblChat.register(UINib(nibName: "OtherChatCell", bundle: nil), forCellReuseIdentifier: "OtherChatCell")
         tblChat.register(UINib(nibName: "MyChatCell", bundle: nil), forCellReuseIdentifier: "MyChatCell")
         tblChat.separatorStyle = .none
@@ -42,7 +44,8 @@ class ChatListVC: UIViewController {
             
             session.dataTask(with: request) {data, response, err in
                 do {
-                    let dict = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSArray
+                    self.chatListArr = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSArray
+                    if let dict =  try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                     if let status = dict.value(forKey: "status") as? NSNumber {
                         if status == 403 {
                             Alert.show("Jane", message: dict.value(forKey: "message") as! String, onVC: self)
@@ -56,7 +59,7 @@ class ChatListVC: UIViewController {
                         Progress.hide(toView: self.view)
                         return
                     }
-                    
+                }
                     Progress.hide(toView: self.view)
                 } catch _ {
                     Progress.hide(toView: self.view)
@@ -81,7 +84,8 @@ class ChatListVC: UIViewController {
             
             session.dataTask(with: request) {data, response, err in
                 do {
-                    let dict = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSDictionary
+                    self.chatListArr = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSArray
+                    if let dict =  try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                     if let status = dict.value(forKey: "status") as? NSNumber {
                         if status == 403 {
                             Alert.show("Jane", message: dict.value(forKey: "message") as! String, onVC: self)
@@ -95,7 +99,7 @@ class ChatListVC: UIViewController {
                         Progress.hide(toView: self.view)
                         return
                     }
-                    
+                  }
                     Progress.hide(toView: self.view)
                 } catch _ {
                     Progress.hide(toView: self.view)
@@ -117,10 +121,19 @@ class ChatListVC: UIViewController {
 }
 extension ChatListVC:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.chatListArr.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyChatCell") as! MyChatCell
+        let dict = self.chatListArr.object(at: indexPath.row) as! NSDictionary
+        if dict.value(forKey: "mine") as! NSNumber == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OtherChatCell") as! OtherChatCell
+            cell.lblChat.text = dict.value(forKey: "message") as? String
             return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyChatCell") as! MyChatCell
+            cell.lblChat.text = dict.value(forKey: "message") as? String
+            return cell
+        }
+        
     }
 }

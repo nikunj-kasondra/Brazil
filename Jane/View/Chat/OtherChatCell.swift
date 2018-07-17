@@ -10,6 +10,7 @@ import UIKit
 
 class OtherChatCell: UITableViewCell {
 
+    @IBOutlet weak var lblChat: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

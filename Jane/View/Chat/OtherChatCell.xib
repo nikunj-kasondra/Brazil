@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTb-kO-d6w">
-                        <rect key="frame" x="309.5" y="0.0" width="55.5" height="43.5"/>
+                        <rect key="frame" x="349" y="0.0" width="16" height="51.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7d-n9-G3O">
-                                <rect key="frame" x="8" y="0.0" width="39.5" height="43.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7d-n9-G3O">
+                                <rect key="frame" x="8" y="4" width="0.0" height="43.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43.5" id="U6u-ZM-0WC"/>
                                 </constraints>
@@ -31,22 +31,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.01176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.30196078430000001" green="0.55294117649999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="R7d-n9-G3O" secondAttribute="bottom" id="4lp-J5-bDw"/>
+                            <constraint firstAttribute="bottom" secondItem="R7d-n9-G3O" secondAttribute="bottom" constant="4" id="4lp-J5-bDw"/>
                             <constraint firstItem="R7d-n9-G3O" firstAttribute="leading" secondItem="eTb-kO-d6w" secondAttribute="leading" constant="8" id="THM-Ab-dQF"/>
-                            <constraint firstItem="R7d-n9-G3O" firstAttribute="top" secondItem="eTb-kO-d6w" secondAttribute="top" id="XFV-GP-dw7"/>
+                            <constraint firstItem="R7d-n9-G3O" firstAttribute="top" secondItem="eTb-kO-d6w" secondAttribute="top" constant="4" id="XFV-GP-dw7"/>
                             <constraint firstAttribute="trailing" secondItem="R7d-n9-G3O" secondAttribute="trailing" constant="8" id="gbf-TX-tT8"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="eTb-kO-d6w" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PN9-Fa-xrg" secondAttribute="leading" constant="90" id="0Sl-e6-VeS"/>
-                    <constraint firstAttribute="bottom" secondItem="eTb-kO-d6w" secondAttribute="bottom" id="WSm-Yg-5mr"/>
+                    <constraint firstAttribute="bottom" secondItem="eTb-kO-d6w" secondAttribute="bottom" priority="250" constant="10" id="WSm-Yg-5mr"/>
                     <constraint firstItem="eTb-kO-d6w" firstAttribute="top" secondItem="PN9-Fa-xrg" secondAttribute="top" id="dxr-4o-C1V"/>
                     <constraint firstAttribute="trailing" secondItem="eTb-kO-d6w" secondAttribute="trailing" constant="10" id="xLH-FN-d7B"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="lblChat" destination="R7d-n9-G3O" id="dm8-W9-Owo"/>
+            </connections>
             <point key="canvasLocation" x="40.5" y="100"/>
         </tableViewCell>
     </objects>

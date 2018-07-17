@@ -6640,7 +6640,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Hw-5z-bN9">
-                                <rect key="frame" x="0.0" y="70" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="RRX-3r-lry" id="nrD-am-SGm"/>
@@ -6658,7 +6658,7 @@
                             <constraint firstAttribute="trailing" secondItem="0Hw-5z-bN9" secondAttribute="trailing" id="a56-fJ-7RY"/>
                             <constraint firstItem="e7T-7l-EqH" firstAttribute="top" secondItem="qqN-Yv-lMS" secondAttribute="bottom" id="dJB-WH-9xH"/>
                             <constraint firstAttribute="trailing" secondItem="qqN-Yv-lMS" secondAttribute="trailing" id="gGb-DO-thF"/>
-                            <constraint firstItem="0Hw-5z-bN9" firstAttribute="top" secondItem="zH2-9T-4AN" secondAttribute="bottom" id="iHd-Qy-agu"/>
+                            <constraint firstItem="0Hw-5z-bN9" firstAttribute="top" secondItem="zH2-9T-4AN" secondAttribute="bottom" constant="10" id="iHd-Qy-agu"/>
                             <constraint firstItem="zH2-9T-4AN" firstAttribute="leading" secondItem="4Hg-cv-xj5" secondAttribute="leading" id="sIU-uv-lN9"/>
                         </constraints>
                     </view>
